@@ -1978,6 +1978,7 @@ PRODUCT_PACKAGES += \
     libcppbor_amethyst \
     libcustomva_intf \
     libcv_common \
+    libdapparamstorage \
     libdataitems \
     libdeflicker \
     libdfintf \
@@ -2287,6 +2288,7 @@ PRODUCT_PACKAGES += \
     libsnsutils \
     libsoc_helper \
     libsoc_helper_jni \
+    libspatializerparamstorage \
     libspcom \
     libspl \
     libssc_default_listener \
