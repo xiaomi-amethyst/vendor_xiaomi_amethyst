@@ -231,11 +231,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/Material/1166466556_2571257293:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/Material/1166466556_2571257293 \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/Material/1166466556_4025145477:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/Material/1166466556_4025145477 \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BASE.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BASE.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_COLOR_LAYER_WITH_MASK_Define_NORMAL_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_COLOR_LAYER_WITH_MASK_Define_NORMAL_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_Define_MULTIPLY_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_Define_MULTIPLY_FRAMEBUFFER_FETCH_ADRENO.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_Define_SOFT_LIGHT_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_Define_SOFT_LIGHT_FRAMEBUFFER_FETCH_ADRENO.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_WITH_MASK_Define_MULTIPLY_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_WITH_MASK_Define_MULTIPLY_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_WITH_MASK_Define_SOFT_LIGHT_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BLEND_IMAGE_LAYER_WITH_MASK_Define_SOFT_LIGHT_MASK_CHANNEL_TYPE_R_FRAMEBUFFER_FETCH_ADRENO.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BRIGHT_EYE_PROCESS.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BRIGHT_EYE_PROCESS.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_BRIGHT_EYE_PROCESS_V2_WITH_PUPIL.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_BRIGHT_EYE_PROCESS_V2_WITH_PUPIL.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_FACIAL_REFINE_FUSE_OFFSET.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_FACIAL_REFINE_FUSE_OFFSET.bin \
@@ -263,7 +258,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEAN_BLUR.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEAN_BLUR.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEAN_BOX_2x2.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEAN_BOX_2x2.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEDIAN_BLUR.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_MEDIAN_BLUR.bin \
-    vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_NORMAL_LUT_512_512_Define_FRAMEBUFFER_FETCH_ADRENO.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_NORMAL_LUT_512_512_Define_FRAMEBUFFER_FETCH_ADRENO.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MEANBLUR_1D.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MEANBLUR_1D.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MEANBLUR_1D_Define_USE_ALPHA_WEIGHT.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MEANBLUR_1D_Define_USE_ALPHA_WEIGHT.bin \
     vendor/xiaomi/amethyst/proprietary/odm/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MERGE_MASK.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/resources/render/BuildIn/binShaders64/OGL_RETOUCH_FOGGY_MERGE_MASK.bin \
@@ -1473,7 +1467,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/libnfc-nxp-pnscr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-pnscr.conf \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/libnfc-qrd-SN100.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100.conf \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-qrd-SN100_38_4MHZ.conf \
-    vendor/xiaomi/amethyst/proprietary/vendor/etc/st54l_conf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/st54l_conf.txt \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/mem_logger_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mem_logger_config.xml \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/models/acd/environment.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/environment.eai \
@@ -1572,6 +1565,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/spr_cfg_xiaomi_o11_42_02_0b_cmd_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/spr_cfg_xiaomi_o11_42_02_0b_cmd_mode_dsc_dsi_panel.xml \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
+    vendor/xiaomi/amethyst/proprietary/vendor/etc/st54l_conf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/st54l_conf.txt \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/xiaomi/amethyst/proprietary/vendor/etc/vmmgr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/vmmgr.conf \
@@ -1924,6 +1918,7 @@ PRODUCT_PACKAGES += \
     libcacertclient \
     libcalculator \
     libcalculator_htp \
+    libcamera2ndk_vendor \
     libcameraopt \
     libcamerapostproc \
     libcamlog \
@@ -1964,6 +1959,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.ecoenginemonitor \
     libcom.xiaomi.eventcallback \
     libcom.xiaomi.grallocutils \
+    libcom.xiaomi.ionutils \
     libcom.xiaomi.mawutils \
     libcom.xiaomi.mawutilsold \
     libcom.xiaomi.metadatautils \
@@ -2421,6 +2417,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.aon-service-impl \
     vendor.qti.hardware.camera.offlinecamera-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
+    vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk \
     vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk \
     vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk \
@@ -2861,7 +2858,6 @@ PRODUCT_PACKAGES += \
     uimgbamanagerlibrary \
     uimservicelibrary \
     com.android.hotwordenrollment.common.util \
-    xiaomi-modem-common \
     qcrilhook \
     vendor.qti.ims.callcapability-V1.0-java \
     vendor.qti.ims.callcapabilityaidlservice-V1-java \
@@ -2886,6 +2882,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsuce-V1.1-java \
     vendor.qti.ims.rcsuce-V1.2-java \
     vendor.qti.ims.rcsuceaidlservice-V1-java \
+    xiaomi-modem-common \
     ImsRtpService-aidl.xml \
     android.hardware.drm_wfdhdcp-service.xml \
     android.hardware.radio.config.xml \
@@ -3082,6 +3079,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor \

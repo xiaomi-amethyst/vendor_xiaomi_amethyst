@@ -551,5 +551,5 @@ enableResortSensorData=TRUE
 #eeprom backup
 enableEEPROMBackup=TRUE
 
-WatermarkVersion=3.002
+WatermarkVersion=3.006
 FilterVersion=3.002
