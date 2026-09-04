@@ -63,6 +63,16 @@
           ]
         },
         {
+          "NodeName": "com.xiaomi.plugin.offlinepostproc",
+          "NodeInstance": "JpegInstanceFinal1",
+          "NodeProperty":[
+            {
+              "NodePropertyName":"NodeMask",
+              "NodePropertyValue":132
+            }
+          ]
+        },
+        {
           "NodeName": "com.xiaomi.plugin.filter",
           "NodeInstance": "FilterInstance0"
         },
@@ -77,6 +87,18 @@
           ]
         },
         {
+            "NodeName": "com.xiaomi.plugin.heifedit",
+            "NodeInstance": "HeifEditInstance"
+        },
+        {
+            "NodeName": "com.xiaomi.plugin.yuv2Heic",
+            "NodeInstance": "yuv2HeicInstance"
+        },
+        {
+            "NodeName": "com.xiaomi.plugin.yuv2Heic",
+            "NodeInstance": "yuv2HeicInstance1"
+        },
+        {
           "NodeName": "com.xiaomi.plugin.swjpegencode",
           "NodeInstance": "swjpegInstance1",
           "NodeProperty":[
@@ -89,6 +111,16 @@
         {
           "NodeName": "com.xiaomi.plugin.offlinepostproc",
           "NodeInstance": "HeicInstance0",
+          "NodeProperty":[
+            {
+              "NodePropertyName":"NodeMask",
+              "NodePropertyValue":128
+            }
+          ]
+        },
+        {
+          "NodeName": "com.xiaomi.plugin.offlinepostproc",
+          "NodeInstance": "HeicInstance1",
           "NodeProperty":[
             {
               "NodePropertyName":"NodeMask",
@@ -197,6 +229,16 @@
           },
           {
             "SrcPort": {
+                "PortId": 2,
+                "NodeInstance": "WatermarkInstance0"
+            },
+            "DstPort": {
+                "PortId": 3,
+                "NodeInstance": "HeifEditInstance"
+            }
+          },
+          {
+            "SrcPort": {
                 "PortId": 3,
                 "NodeInstance": "WatermarkInstance0"
             },
@@ -204,6 +246,84 @@
                 "PortId": 4,
                 "NodeInstance": "jpegrAggrInstance"
             }
+          },
+          {
+            "SrcPort": {
+                "PortId": 3,
+                "NodeInstance": "WatermarkInstance0"
+            },
+            "DstPort": {
+                "PortId": 4,
+                "NodeInstance": "HeifEditInstance"
+            }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 5,
+                  "NodeInstance": "WatermarkInstance0"
+              },
+              "DstPort": {
+                  "PortId": 0,
+                  "NodeInstance": "JpegInstanceFinal1",
+                  "PortFormat": "YUV420_NV12"
+              }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 0,
+                  "NodeInstance": "JpegInstanceFinal1",
+                  "PortFormat": "BLOB"
+              },
+              "DstPort": {
+                  "PortId": 8,
+                  "NodeInstance": "jpegrAggrInstance"
+              }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 5,
+                  "NodeInstance": "WatermarkInstance0"
+              },
+              "DstPort": {
+                  "PortId": 0,
+                  "NodeInstance": "HeicInstance1",
+                  "PortFollowType":2,
+                  "FollowPortId":0
+              }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 0,
+                  "NodeInstance": "HeicInstance1",
+                  "PortFormat": "IMPLEMENTATION_DEFINED"
+              },
+              "DstPort": {
+                  "PortId": 0,
+                  "NodeInstance": "yuv2HeicInstance1",
+                  "PortFormat": "YUV420_NV12"
+              }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 0,
+                  "NodeInstance": "yuv2HeicInstance1",
+                  "PortFormat": "BLOB"
+              },
+              "DstPort": {
+                  "PortId": 8,
+                  "NodeInstance": "HeifEditInstance"
+              }
+          },
+          {
+              "SrcPort": {
+                  "PortId": 1,
+                  "NodeInstance": "HeicInstance1",
+                  "PortFormat": "BLOB"
+              },
+              "DstPort": {
+                  "PortId": 1,
+                  "NodeInstance": "yuv2HeicInstance1"
+              }
           },
           {
             "SrcPort": {
@@ -223,6 +343,18 @@
             "DstPort": {
                 "PortId": 1,
                 "NodeInstance": "jpegrAggrInstance",
+                "PortFormat": "BLOB"
+            }
+          },
+          {
+            "SrcPort": {
+                "PortId": 0,
+                "NodeInstance": "swjpegInstance1",
+                "PortFormat": "BLOB"
+            },
+            "DstPort": {
+                "PortId": 1,
+                "NodeInstance": "HeifEditInstance",
                 "PortFormat": "BLOB"
             }
           },
@@ -261,6 +393,17 @@
               "NodeInstance": "HeicInstance0",
               "PortFormat": "IMPLEMENTATION_DEFINED"
           },
+          "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "yuv2HeicInstance"
+          }
+        },
+        {
+          "SrcPort": {
+              "PortId": 0,
+              "NodeInstance": "yuv2HeicInstance",
+              "PortFormat": "BLOB"
+          },
            "DstPort": {
                  "PortId": 0,
                  "NodeInstance": "jpegrAggrInstance",
@@ -272,6 +415,18 @@
                  "PortId": 0,
                  "NodeInstance": "jpegrAggrInstance",
                  "PortFormat": "BLOB"
+            },
+            "DstPort": {
+              "PortId": 0,
+              "NodeInstance": "HeifEditInstance",
+              "PortFormat": "BLOB"
+            }
+        },
+        {
+            "SrcPort": {
+                "PortId": 0,
+                "NodeInstance": "HeifEditInstance",
+                "PortFormat": "BLOB"
             },
             "DstPort": {
                 "PortId": 0,
@@ -298,7 +453,7 @@
           },
           "DstPort": {
               "PortId": 1,
-              "NodeInstance": "SinkBuffer1"
+              "NodeInstance": "yuv2HeicInstance"
           }
       }
       ]

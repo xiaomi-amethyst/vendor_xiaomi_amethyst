@@ -10755,6 +10755,44 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libfmq",
+                "libhidlbase",
+                "libhardware",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "android.frameworks.cameraservice.common-V1-ndk",
+                "android.frameworks.cameraservice.device-V1-ndk",
+                "android.frameworks.cameraservice.service-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcameraopt",
     owner: "xiaomi",
     strip: {
@@ -12182,7 +12220,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcamera_metadata",
                 "libcom.xiaomi.debug",
-                "libui-v34",
                 "libc++",
                 "libc",
                 "libm",
@@ -22403,9 +22440,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libbase",
-                "libcrypto",
-                "libutils",
                 "libbinder",
                 "libcutils",
                 "libbinder_ndk",
@@ -26227,8 +26261,36 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "android.hardware.graphics.allocator-V2-ndk",
                 "libprocessgroup",
-                "vendor.qti.hardware.camera.postproc@1.0",
+                "vendor.qti.hardware.camera.postproc@1.0_vendor",
                 "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.camera.postproc@1.0_vendor",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -35025,6 +35087,7 @@ cc_prebuilt_library_shared {
                 "libGLESv2",
                 "libnativewindow",
                 "libminikin.xiaomi",
+                "libcom.xiaomi.ionutils",
                 "libMiPhotoFilter",
                 "libc++",
                 "libc",
@@ -39148,15 +39211,6 @@ dex_import {
 }
 
 dex_import {
-    name: "xiaomi-modem-common",
-    owner: "xiaomi",
-    jars: [
-        "proprietary/system_ext/framework/xiaomi-modem-common.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
     name: "qcrilhook",
     owner: "xiaomi",
     jars: [
@@ -39368,6 +39422,15 @@ dex_import {
     owner: "xiaomi",
     jars: [
         "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "xiaomi-modem-common",
+    owner: "xiaomi",
+    jars: [
+        "proprietary/system_ext/framework/xiaomi-modem-common.jar",
     ],
     system_ext_specific: true,
 }
@@ -43715,42 +43778,4 @@ filegroup {
         "proprietary/vendor/etc/qcril_database/upgrade/other/0014_version_update_modules.sql",
         "proprietary/vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql",
     ],
-}
-
-cc_prebuilt_library_shared {
-    name: "libcamera2ndk_vendor",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    shared_libs: [
-        "android.frameworks.cameraservice.common-V1-ndk",
-        "android.frameworks.cameraservice.device-V3-ndk",
-        "android.frameworks.cameraservice.service-V3-ndk",
-        "libbinder_ndk",
-        "libc++",
-        "libc",
-        "libcamera_metadata",
-        "libcutils",
-        "libdl",
-        "libfmq",
-        "libhardware",
-        "libhidlbase",
-        "liblog",
-        "libm",
-        "libmediandk",
-        "libnativewindow",
-        "libstagefright_foundation",
-        "libutils",
-    ],
-    soc_specific: true,
-    prefer: true,
 }

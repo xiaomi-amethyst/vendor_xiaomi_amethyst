@@ -34,6 +34,17 @@
         ],
         "ReclaimActions": {
             "reclaim_once": {
+                "200M_psi_monitor": [
+                    {
+                        "cpu_psi_target": 40,
+                        "enable": false,
+                        "target": "512000",
+                        "trigger": {
+                            "cache": "2048000:-1",
+                            "free": "0:512000"
+                        }
+                    }
+                ],
                 "psi_monitor": [
                     {
                         "enable": false,
@@ -53,6 +64,17 @@
                         "trigger": {
                             "free": "0:512000",
                             "cache": "1024000:-1"
+                        }
+                    }
+                ],
+                "live_motion_psi_monitor": [
+                    {
+                        "cpu_psi_target": 40,
+                        "enable": false,
+                        "target": "512000",
+                        "trigger": {
+                            "cache": "2048000:-1",
+                            "free": "0:512000"
                         }
                     }
                 ],
@@ -97,6 +119,17 @@
                         "trigger":{
                             "free": "0:204800",
                             "cache": "2048000:-1"
+                        }
+                    }
+                ],
+                "video_4k_dolby_event": [
+                    {
+                        "cpu_psi_target": 20,
+                        "enable": false,
+                        "target": 614400,
+                        "trigger": {
+                            "cache": "2048000:-1",
+                            "free": "0:614400"
                         }
                     }
                 ]
@@ -171,7 +204,7 @@
                 "3rdcam_open_event":[
                     {
                         "enable": true,
-                        "free_target": 512000,
+                        "free_target": 819200,
                         "target": 2048000,
                         "kill_level": 0,
                         "trigger": {
