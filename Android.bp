@@ -10778,8 +10778,8 @@ cc_prebuilt_library_shared {
                 "libcamera_metadata",
                 "libmediandk",
                 "android.frameworks.cameraservice.common-V1-ndk",
-                "android.frameworks.cameraservice.device-V1-ndk",
-                "android.frameworks.cameraservice.service-V1-ndk",
+                "android.frameworks.cameraservice.device-V3-ndk",
+                "android.frameworks.cameraservice.service-V3-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -12122,6 +12122,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcom.xiaomi.ionutils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcom.xiaomi.ionutils.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libsync",
+                "libhidlbase",
+                "libhidltransport",
+                "libui",
+                "libcamera_metadata",
+                "libutils",
+                "libdmabufheap",
+                "libnativewindow",
+                "libprocessgroup",
+                "libcom.xiaomi.debug",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcom.xiaomi.mawutils",
     owner: "xiaomi",
     strip: {
@@ -12215,6 +12251,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcom.xiaomi.metadatautils.so",
             ],
             shared_libs: [
+                "libui-v34",
                 "libutils",
                 "libcutils",
                 "liblog",
@@ -26261,36 +26298,8 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.display.mapperextensions@1.1",
                 "android.hardware.graphics.allocator-V2-ndk",
                 "libprocessgroup",
-                "vendor.qti.hardware.camera.postproc@1.0_vendor",
+                "vendor.qti.hardware.camera.postproc@1.0",
                 "libz",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.camera.postproc@1.0_vendor",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",

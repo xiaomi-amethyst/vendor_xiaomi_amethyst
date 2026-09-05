@@ -10,3 +10,4 @@ service vendor.qesdk-securitymgr /vendor/bin/qesdk-secmanager
     user system
     group system
     socket qesdsec seqpacket 666 root system
+    disabled
