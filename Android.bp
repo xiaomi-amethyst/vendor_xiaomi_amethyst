@@ -12251,6 +12251,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcom.xiaomi.metadatautils.so",
             ],
             shared_libs: [
+                "libui-v34",
                 "libutils",
                 "libcutils",
                 "liblog",
