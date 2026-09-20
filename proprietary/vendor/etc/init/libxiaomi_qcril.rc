@@ -12,12 +12,14 @@ service xiaomi_modem_sh /vendor/bin/init.xiaomi.modem.sh
     class late_start
     user root
     group root system radio
+    disabled
     oneshot
 
 service xiaomi_modem_cust_sh /vendor/bin/init.xiaomi.modem.cust.sh
     class late_start
     user root
     group root system radio
+    disabled
     oneshot
 
 service diag_mdlog_auto_start /vendor/bin/diag_mdlog -q 0x2006 -j 1 -u -c -i -n 50
